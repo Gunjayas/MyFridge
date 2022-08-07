@@ -9,9 +9,17 @@ namespace MyFridge.Data.Models
     public class Recipe_Ingredient
     {
         public int RecipeId { get; set; }
-        public Recipe Recipe { get; set; }
+
+        /// <summary>
+        /// This is also a navigational property.  It points to the Recipie
+        /// </summary>
+        public virtual Recipe Recipe { get; set; }
 
         public int IngredientId { get; set; }
-        public Ingredient Ingredient { get; set; }
+
+        /// <summary>
+        /// Navigational property that points to the Ingredient
+        /// </summary>
+        public virtual Ingredient Ingredient { get; set; }
     }
 }
