@@ -11,7 +11,10 @@ namespace MyFridge.Data.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public List<Recipe_Ingredient> da;
+        /// <summary>
+        /// Navigational property to the recipies that this ingredient is used in
+        /// </summary>
+        public virtual ICollection<Recipe_Ingredient> Recipes { get; set; }
 
     }
 }
